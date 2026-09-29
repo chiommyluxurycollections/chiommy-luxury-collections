@@ -1,0 +1,656 @@
+/* ================================
+   GENERAL STYLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f8f5f0;
+    color: #1c1c1c;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+header {
+    width: 100%;
+    padding: 20px 7%;
+    background: #111111;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #d4af37;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    display: block;
+    color: #ffffff;
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 90vh;
+    padding: 70px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background: #f8f5f0;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.small-text {
+    color: #a17c18;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #171717;
+}
+
+.hero-content > p:not(.small-text) {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555555;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #111111;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    border: 1px solid #111111;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #d4af37;
+    border-color: #d4af37;
+    color: #111111;
+}
+
+
+/* ================================
+   HERO IMAGE
+================================ */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+
+/* ================================
+   COLLECTIONS
+================================ */
+
+.collections {
+    padding: 100px 7%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.collections h2,
+.about h2,
+.contact h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.collections p:not(.small-text) {
+    max-width: 650px;
+    margin: auto;
+
+    font-family: Arial, sans-serif;
+    color: #666666;
+}
+/* ================================
+   COLLECTION CARDS
+================================ */
+
+.collections-intro {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    font-family: Arial, sans-serif;
+    color: #666666;
+}
+
+.collection-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.collection-card {
+    padding: 35px 25px;
+
+    background: #f8f5f0;
+
+    border: 1px solid #e5dfd5;
+
+    transition: 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+}
+
+.collection-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.collection-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.collection-card p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #666666;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ================================
+   FEATURED PRODUCTS
+================================ */
+
+.products {
+    padding: 100px 7%;
+    text-align: center;
+    background: #f8f5f0;
+}
+
+.products h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.products-intro {
+    max-width: 650px;
+    margin: 0 auto 50px;
+
+    font-family: Arial, sans-serif;
+    color: #666666;
+}
+
+.product-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: #ffffff;
+    text-align: left;
+
+    border: 1px solid #e5dfd5;
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+.product-image {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-category {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #a17c18;
+    margin-bottom: 8px;
+}
+
+.product-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products {
+        padding: 70px 6%;
+    }
+
+    .products h2 {
+        font-size: 34px;
+    }
+
+}
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+    padding: 100px 7%;
+    text-align: center;
+    background: #f1ece4;
+}
+
+.about p:not(.small-text) {
+    max-width: 750px;
+    margin: auto;
+
+    font-family: Arial, sans-serif;
+    color: #555555;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact {
+    padding: 100px 7%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.contact p:not(.small-text) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+
+    font-family: Arial, sans-serif;
+    color: #555555;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 40px 7%;
+    text-align: center;
+
+    background: #111111;
+    color: #ffffff;
+}
+
+footer h3 {
+    color: #d4af37;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #cccccc;
+    margin: 5px 0;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 60px 6%;
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-content > p:not(.small-text) {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 350px;
+    }
+
+    .collections,
+    .about,
+    .contact {
+        padding: 70px 6%;
+    }
+
+    .collections h2,
+    .about h2,
+    .contact h2 {
+        font-size: 34px;
+    }
+
+    footer {
+        padding: 35px 6%;
+    }
+
+}
+/* ================================
+   WHY CHOOSE US
+================================ */
+
+.why-us {
+    padding: 100px 7%;
+    text-align: center;
+    background: #f8f5f0;
+}
+
+.why-us h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.why-intro {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    font-family: Arial, sans-serif;
+    color: #666666;
+}
+
+.why-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    padding: 35px 20px;
+    background: #ffffff;
+    border: 1px solid #e5dfd5;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+}
+
+.why-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .why-us {
+        padding: 70px 6%;
+    }
+
+    .why-us h2 {
+        font-size: 34px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ================================
+   HOW TO ORDER
+================================ */
+
+.how-to-order {
+    padding: 100px 7%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.how-to-order h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.how-intro {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    font-family: Arial, sans-serif;
+    color: #666666;
+}
+
+.order-steps {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.order-step {
+    padding: 35px 20px;
+    background: #f8f5f0;
+    border: 1px solid #e5dfd5;
+    transition: 0.3s;
+}
+
+.order-step:hover {
+    transform: translateY(-6px);
+    border-color: #d4af37;
+}
+
+.order-step span {
+    display: block;
+    color: #a17c18;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.order-step h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.order-step p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .how-to-order {
+        padding: 70px 6%;
+    }
+
+    .how-to-order h2 {
+        font-size: 34px;
+    }
+
+    .order-steps {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ================================
+   PRODUCT IMAGE EFFECT
+================================ */
+
+.product-image img {
+    transition: 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
